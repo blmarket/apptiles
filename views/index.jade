@@ -1,7 +1,25 @@
 extend layout
 
 block heads
+  link(rel='stylesheet', href='/tiles/main.css', type='text/css')
+  link(rel='stylesheet', href='/tiles/feat.css', type='text/css')
+  link(rel='stylesheet', href='/tiles/floor.css', type='text/css')
+  link(rel='stylesheet', href='/tiles/player.css', type='text/css')
+  link(rel='stylesheet', href='/tiles/wall.css', type='text/css')
+  style(type='text/css')
+    div.hover {
+      background: skyblue;
+    }
+  script(src="http://code.jquery.com/jquery-1.9.1.min.js")
 
 block contents
   .contents
-    p hello
+    - each tile in tiles
+      .main(style="float:left;", class=tile.toLowerCase())
+  script(type="text/javascript")
+    $('div').hover(function() {
+      $(this).addClass('hover')
+    }, function() {
+      $(this).removeClass('hover')
+    });
+    
