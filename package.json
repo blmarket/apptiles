@@ -1,0 +1,17 @@
+{
+  "name": "tileapp",
+  "version": "0.0.0",
+  "description": "tile picker",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "",
+  "author": "blmarket",
+  "license": "MIT",
+  "dependencies": {
+    "jade": "~0.28.2",
+    "express": "~3.1.1",
+    "coffee-script": "~1.6.2"
+  }
+}
